@@ -1,0 +1,31 @@
+DESCRIPTION="Sound editor"
+HOMEPAGE="http://ccrma.stanford.edu/software/snd/"
+SRC_URI="ftp://ccrma-ftp.stanford.edu/pub/Lisp/${P}.tar.gz"
+PATCH_URI="10.0-oss.patch"
+
+DIFF_EXCLUDES="mus-config.h po"
+
+NO_AUTOHEADER=1
+CYGCONF_ARGS="
+	--without-alsa
+	--without-esd
+	--with-fam
+	--with-fftw
+	--with-float-samples
+	--with-gl
+	--with-gsl
+	--with-gtk
+	--with-guile
+	--without-jack
+	--with-ladspa
+	--without-motif
+	--with-oss
+	--without-ruby
+"
+
+src_install() {
+	cd ${B}
+	USE_DESTDIR=0
+	cyginstall DOMAIN="Snd" SND_SCRIPTS="*.scm"
+}
+DOCS="*.Snd *.html *.png"

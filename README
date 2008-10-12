@@ -1,0 +1,200 @@
+snd
+------------------------------------------
+Snd is a sound editor modelled loosely after Emacs and an old, 
+sorely-missed PDP-10 sound editor named Dpysnd. It can accommodate any 
+number of sounds each with any number of channels, and can be customized 
+and extended using Guile.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  gamin-0.1.9-1
+  glib2-2.16.6-1
+  gsl-1.11-1
+  gtk2-x11-2.12.12-1
+  gtkglext-x11-1.2.0-1
+  ladspa-sdk-1.13-1
+  libfftw3_3-3.1.2-2
+  libGL1-7.0.4-1
+  libGLU1-7.0.4-1
+  libguile17-1.8.5-1
+  libintl8-0.17-1
+  libX11_6-1.1.3-1
+  pango-1.20.5-1
+  flac
+  mpg321
+  speex
+  timidity++
+  vorbis-tools
+  wavpack
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.61-1
+  binutils-20080624-2
+  cygport-0.4.0-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  gettext-tools-0.17-1
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://ccrma.stanford.edu/software/snd/
+
+Canonical download:
+  ftp://ccrma-ftp.stanford.edu/pub/Lisp/
+
+-------------------------------------------
+
+Build instructions:
+  unpack snd-10.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./snd-10.0-X.cygport all
+
+This will create:
+  /usr/src/snd-10.0-X-src.tar.bz2
+  /usr/src/snd-10.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/snd.exe
+  /usr/share/doc/snd-10.0/ABOUT-NLS
+  /usr/share/doc/snd-10.0/COPYING
+  /usr/share/doc/snd-10.0/ChangeLog
+  /usr/share/doc/snd-10.0/HISTORY.Snd
+  /usr/share/doc/snd-10.0/NEWS
+  /usr/share/doc/snd-10.0/README.Snd
+  /usr/share/doc/snd-10.0/TODO.Snd
+  /usr/share/locale/de/LC_MESSAGES/Snd.mo
+  /usr/share/man/man1/snd.1.gz
+  /usr/share/snd/analog-filter.scm
+  /usr/share/snd/animals.scm
+  /usr/share/snd/autosave.scm
+  /usr/share/snd/bess.scm
+  /usr/share/snd/bess1.scm
+  /usr/share/snd/bird.scm
+  /usr/share/snd/clean.scm
+  /usr/share/snd/clm-ins.scm
+  /usr/share/snd/clm23.scm
+  /usr/share/snd/debug.scm
+  /usr/share/snd/dlocsig.scm
+  /usr/share/snd/draw.scm
+  /usr/share/snd/dsp.scm
+  /usr/share/snd/edit-menu.scm
+  /usr/share/snd/edit123.scm
+  /usr/share/snd/effects-utils.scm
+  /usr/share/snd/env.scm
+  /usr/share/snd/enved.scm
+  /usr/share/snd/eval-c.scm
+  /usr/share/snd/event.scm
+  /usr/share/snd/examp.scm
+  /usr/share/snd/export-all.scm
+  /usr/share/snd/extensions.scm
+  /usr/share/snd/fade.scm
+  /usr/share/snd/fft-menu.scm
+  /usr/share/snd/fix-optargs.scm
+  /usr/share/snd/fmv.scm
+  /usr/share/snd/frame.scm
+  /usr/share/snd/freeverb.scm
+  /usr/share/snd/gauche-format.scm
+  /usr/share/snd/gauche-optargs.scm
+  /usr/share/snd/generators.scm
+  /usr/share/snd/grani.scm
+  /usr/share/snd/gtk-effects-utils.scm
+  /usr/share/snd/gtk-effects.scm
+  /usr/share/snd/gtk-popup.scm
+  /usr/share/snd/gui.scm
+  /usr/share/snd/hooks.scm
+  /usr/share/snd/index.scm
+  /usr/share/snd/jcrev.scm
+  /usr/share/snd/kmenu.scm
+  /usr/share/snd/ladspa-help.scm
+  /usr/share/snd/ladspa.scm
+  /usr/share/snd/maraca.scm
+  /usr/share/snd/marks-menu.scm
+  /usr/share/snd/marks.scm
+  /usr/share/snd/maxf.scm
+  /usr/share/snd/misc.scm
+  /usr/share/snd/mix.scm
+  /usr/share/snd/mixer.scm
+  /usr/share/snd/moog.scm
+  /usr/share/snd/musglyphs.scm
+  /usr/share/snd/nb.scm
+  /usr/share/snd/new-backgrounds.scm
+  /usr/share/snd/new-buttons.scm
+  /usr/share/snd/new-effects.scm
+  /usr/share/snd/noise.scm
+  /usr/share/snd/numerics.scm
+  /usr/share/snd/oo.scm
+  /usr/share/snd/oscope.scm
+  /usr/share/snd/panic.scm
+  /usr/share/snd/pd-add.scm
+  /usr/share/snd/pd-any.scm
+  /usr/share/snd/pd-fm.scm
+  /usr/share/snd/pd-global.scm
+  /usr/share/snd/pd-inout.scm
+  /usr/share/snd/pd-local.scm
+  /usr/share/snd/pd-mozilla.scm
+  /usr/share/snd/pd-send_receive.scm
+  /usr/share/snd/pd-stochastic.scm
+  /usr/share/snd/peak-env.scm
+  /usr/share/snd/peak-phases.scm
+  /usr/share/snd/piano.scm
+  /usr/share/snd/play.scm
+  /usr/share/snd/poly.scm
+  /usr/share/snd/popup.scm
+  /usr/share/snd/prc95.scm
+  /usr/share/snd/pvoc.scm
+  /usr/share/snd/rgb.scm
+  /usr/share/snd/rt-clm-ins.scm
+  /usr/share/snd/rt-compiler.scm
+  /usr/share/snd/rt-coroutines.scm
+  /usr/share/snd/rt-engine.scm
+  /usr/share/snd/rt-examples.scm
+  /usr/share/snd/rt-faust.scm
+  /usr/share/snd/rt-player.scm
+  /usr/share/snd/rt-stalin.scm
+  /usr/share/snd/rtio.scm
+  /usr/share/snd/rubber.scm
+  /usr/share/snd/selection.scm
+  /usr/share/snd/singer.scm
+  /usr/share/snd/snd-gl.scm
+  /usr/share/snd/snd-gtk.scm
+  /usr/share/snd/snd-hobbit.scm
+  /usr/share/snd/snd-motif.scm
+  /usr/share/snd/snd-test.scm
+  /usr/share/snd/snd4.scm
+  /usr/share/snd/snd5.scm
+  /usr/share/snd/snd6.scm
+  /usr/share/snd/snd7.scm
+  /usr/share/snd/snd8.scm
+  /usr/share/snd/snd9.scm
+  /usr/share/snd/snd_conffile.scm
+  /usr/share/snd/snddiff.scm
+  /usr/share/snd/sndwarp.scm
+  /usr/share/snd/special-menu.scm
+  /usr/share/snd/spectr.scm
+  /usr/share/snd/spokenword.scm
+  /usr/share/snd/stochastic.scm
+  /usr/share/snd/strad.scm
+  /usr/share/snd/toolbar.scm
+  /usr/share/snd/v.scm
+  /usr/share/snd/ws.scm
+  /usr/share/snd/xm-enved.scm
+  /usr/share/snd/zip.scm
+
+------------------
+
+Port Notes:
+
+----- version 10.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

@@ -1,0 +1,15 @@
+--- origsrc/snd-10.0/configure.ac	2008-09-06 06:29:29.000000000 -0500
++++ src/snd-10.0/configure.ac	2008-10-12 01:57:33.735317800 -0500
+@@ -1868,10 +1868,8 @@
+         fi
+         ;;
+     *-*-cygwin*)
+-	if test "$with_jack" != yes ; then 
+-	    AC_DEFINE(MUS_WINDOZE)
+-	    AUDIO_SYSTEM=Windoze
+-	fi
++	AC_DEFINE(HAVE_OSS)
++	AUDIO_SYSTEM=OSS
+ 	;;
+     *-*-mingw*)
+ 	AC_DEFINE(MUS_WINDOZE)
