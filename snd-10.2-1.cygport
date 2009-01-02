@@ -6,6 +6,7 @@ PATCH_URI="10.0-oss.patch"
 DIFF_EXCLUDES="mus-config.h po"
 
 NO_AUTOHEADER=1
+# select only one audio system; prefer OSS
 CYGCONF_ARGS="
 	--without-alsa
 	--without-esd
@@ -22,10 +23,29 @@ CYGCONF_ARGS="
 	--with-oss
 	--without-ruby
 "
+CYGCONF_SOURCE=${S}
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+
+	mkdir -p ${B}/gui
+	cd ${B}/gui
+	cygconf
+	cygmake snd
+
+	mkdir -p ${B}/cli
+	cd ${B}/cli
+	cygconf --without-ruby
+	lndirs ${S} .
+	cygmake -j1 sndrecord sndinfo sndplay audinfo
+}
 
 src_install() {
-	cd ${B}
+	cd ${B}/gui
 	USE_DESTDIR=0
 	cyginstall DOMAIN="Snd" SND_SCRIPTS="*.scm"
+
+	dobin ${B}/cli/*.exe
 }
 DOCS="*.Snd *.html *.png"

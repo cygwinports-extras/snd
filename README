@@ -7,19 +7,19 @@ and extended using Guile.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  gamin-0.1.9-1
-  glib2-2.16.6-1
-  gsl-1.11-1
-  gtk2-x11-2.12.12-1
-  gtkglext-x11-1.2.0-1
+  gsl-1.12-1
   ladspa-sdk-1.13-1
   libfftw3_3-3.1.2-2
+  libgamin1_0-0.1.10-1
   libGL1-7.0.4-1
+  libglib2.0_0-2.18.3-1
   libGLU1-7.0.4-1
+  libgtk2.0_0-2.14.6-1
+  libgtkglext1.0_0-1.2.0-2
   libguile17-1.8.5-1
-  libintl8-0.17-1
-  libX11_6-1.1.3-1
-  pango-1.20.5-1
+  libintl8-0.17-2
+  libpango1.0_0-1.22.4-1
+  libX11_6-1.1.5-1
   flac
   mpg321
   speex
@@ -29,12 +29,12 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
+  autoconf2.5-2.63-1
   binutils-20080624-2
-  cygport-0.4.0-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  gettext-tools-0.17-1
+  gettext-tools-0.17-2
   make-3.81-1
   pkg-config-0.23a-2
   sed-4.1.5-2
@@ -48,28 +48,32 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack snd-10.0-X-src.tar.bz2
+  unpack snd-10.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./snd-10.0-X.cygport all
+  cygport ./snd-10.2-X.cygport all
 
 This will create:
-  /usr/src/snd-10.0-X-src.tar.bz2
-  /usr/src/snd-10.0-X.tar.bz2
+  /usr/src/snd-10.2-X-src.tar.bz2
+  /usr/src/snd-10.2-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
+  /usr/bin/audinfo.exe
   /usr/bin/snd.exe
-  /usr/share/doc/snd-10.0/ABOUT-NLS
-  /usr/share/doc/snd-10.0/COPYING
-  /usr/share/doc/snd-10.0/ChangeLog
-  /usr/share/doc/snd-10.0/HISTORY.Snd
-  /usr/share/doc/snd-10.0/NEWS
-  /usr/share/doc/snd-10.0/README.Snd
-  /usr/share/doc/snd-10.0/TODO.Snd
+  /usr/bin/sndinfo.exe
+  /usr/bin/sndplay.exe
+  /usr/bin/sndrecord.exe
+  /usr/share/doc/snd-10.2/ABOUT-NLS
+  /usr/share/doc/snd-10.2/COPYING
+  /usr/share/doc/snd-10.2/ChangeLog
+  /usr/share/doc/snd-10.2/HISTORY.Snd
+  /usr/share/doc/snd-10.2/NEWS
+  /usr/share/doc/snd-10.2/README.Snd
+  /usr/share/doc/snd-10.2/TODO.Snd
   /usr/share/locale/de/LC_MESSAGES/Snd.mo
   /usr/share/man/man1/snd.1.gz
   /usr/share/snd/analog-filter.scm
@@ -191,6 +195,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 10.2-1 -----
+Version bump.  Added command line utilities.
 
 ----- version 10.0-1 -----
 Initial release for Cygwin.

@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin gamin glib2 gsl gtk2-x11 gtkglext-x11 ladspa-sdk libfftw3_3 libGL1 libGLU1 libguile17 libintl8 libX11_6 pango flac mpg321 speex timidity++ vorbis-tools wavpack
+requires: cygwin gsl ladspa-sdk libgamin1_0 libglib2.0_0 libgtk2.0_0 libgtkglext1.0_0 libfftw3_3 libGL1 libGLU1 libguile17 libintl8 libpango1.0_0 libX11_6 flac mpg321 speex timidity++ vorbis-tools wavpack
 sdesc: "Sound editor"
 ldesc: "Snd is a sound editor modelled loosely after Emacs and an old,
 sorely-missed PDP-10 sound editor named Dpysnd. It can accommodate any
